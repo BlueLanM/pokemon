@@ -46,3 +46,12 @@ export function loginUser(data: any) {
     data,
   });
 }
+
+export default {
+  getUser,
+  addUser,
+  deleteUser,
+  updateUser,
+  registerUser,
+  loginUser,
+};
