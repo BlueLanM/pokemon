@@ -3,7 +3,7 @@ import { Button, Form, Input, Space, message } from "antd";
 import styles from "./index.module.scss";
 import { useRouter } from "next/navigation";
 import { useCookieState, useRequest } from "ahooks";
-import { loginUser } from "@/pages/service/user";
+import { loginUser } from "@/app/service/user";
 
 const { Item } = Form;
 

@@ -14,7 +14,7 @@ import {
 } from "antd";
 import { useRequest } from "ahooks";
 
-import { addUser, deleteUser, getUser, updateUser } from "@/pages/service/user";
+import { addUser, deleteUser, getUser, updateUser } from "@/app/service/user";
 
 const User = () => {
   const [form] = Form.useForm();
