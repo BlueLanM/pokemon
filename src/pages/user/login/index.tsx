@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Form, Input, Space, message } from "antd";
 import styles from "./index.module.scss";
 import { useRouter } from "next/navigation";
-import { useRequest } from "ahooks";
+import { useCookieState, useRequest } from "ahooks";
 import { loginUser } from "@/pages/service/user";
 
 const { Item } = Form;
@@ -25,12 +25,14 @@ const tailLayout = {
 const Login = () => {
   const [form] = Form.useForm();
   const router = useRouter();
-
+  const [user, setUser] = useCookieState("userName");
   const { run } = useRequest(loginUser, {
     manual: true,
     onSuccess: (res: any) => {
-      if (res.data.success) {
+      if (res?.data?.success) {
         message.success("登录成功");
+        router.push("/game/homePage");
+        setUser(res?.data?.data?.nickName);
       } else {
         message.error(res.data.message);
       }

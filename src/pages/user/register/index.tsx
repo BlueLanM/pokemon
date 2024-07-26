@@ -2,7 +2,6 @@ import React from "react";
 import { Button, Form, Input, Space, message } from "antd";
 import styles from "./index.module.scss";
 import { useRouter } from "next/navigation";
-
 import { useRequest } from "ahooks";
 import { registerUser } from "@/pages/service/user";
 
