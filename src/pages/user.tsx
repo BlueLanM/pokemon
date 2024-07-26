@@ -16,7 +16,7 @@ import { useRequest } from "ahooks";
 
 import { addUser, deleteUser, getUser, updateUser } from "@/pages/service/user";
 
-export default () => {
+const User = () => {
   const [form] = Form.useForm();
   const [state, setState] = useSet({
     isAdd: false,
@@ -137,3 +137,5 @@ export default () => {
     </div>
   );
 };
+
+export default User;
